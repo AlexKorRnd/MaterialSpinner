@@ -31,19 +31,19 @@ import com.jaredrummler.materialspinner.MaterialSpinner;
 public class MainActivity extends AppCompatActivity {
 
   private static final String[] ANDROID_VERSIONS = {
-      "Cupcake",
-      "Donut",
-      "Eclair",
-      "Froyo",
-      "Gingerbread",
-      "Honeycomb",
-      "Ice Cream Sandwich",
-      "Jelly Bean",
-      "KitKat",
-      "Lollipop",
-      "Marshmallow",
-      "Nougat",
-      "Oreo"
+      "1. Cupcake",
+      "2. Donut",
+      "3. Eclair",
+      "4. Froyo",
+      "5. Gingerbread",
+      "6. Honeycomb",
+      "7. Ice Cream Sandwich",
+      "8. Jelly Bean",
+      "9. KitKat",
+      "10. Lollipop",
+      "11. Marshmallow",
+      "12. Nougat",
+      "13. Oreo"
   };
 
   @Override protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
 
       @Override public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
-        Snackbar.make(view, "Clicked " + item, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(view, "Clicked " + ANDROID_VERSIONS[position], Snackbar.LENGTH_LONG).show();
       }
     });
     spinner.setOnNothingSelectedListener(new MaterialSpinner.OnNothingSelectedListener() {
